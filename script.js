@@ -1,4 +1,21 @@
-// Simple script to greet users
-console.log("Welcome to Charith - Gamers Hub!");
+// Modal elements
+const modal = document.getElementById("teaser-modal");
+const btn = document.getElementById("teaser-btn");
+const span = document.getElementsByClassName("close")[0];
 
-// You can add more interactivity here later
+// Open modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Close modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close when clicking outside
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
